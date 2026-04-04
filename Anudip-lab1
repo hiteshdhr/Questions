@@ -51,3 +51,30 @@ class Main{
 //tota A = 1000
 // withdrawal = 6000
 //deposit = 3000; total balance = deposit + available balance after withdrawl.
+
+
+#Q2. Write a program to input two numbers and find the maximum between two
+numbers using the conditional/ternary operator.
+# code:
+
+import java.util.Scanner;
+
+public class maxNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number : " );
+        double num1 = sc.nextDouble();
+
+        System.out.print(" Enter second number : ");
+        double num2 = sc.nextDouble();
+
+        if(num1 > num2){
+            System.out.print("the maximum between " + num1 +  " and " + num2 + " is : " + num1);
+        }else{
+            System.out.print("the maximum between " + num1 + " and " + num2 + " is : " + num2);
+        }
+    }
+}
+
