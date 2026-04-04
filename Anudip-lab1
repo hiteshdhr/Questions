@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class Bank{
+
+    double amount;
+
+    public Bank(double currentAmount){
+        this.amount = currentAmount;
+    }
+
+    public void withDrawal(double withdrawalAmount){
+
+        String message = (withdrawalAmount <= amount ? "Withdrawal Successful" : "Insufficient Balance");
+        System.out.println(message);
+
+        if(message.equals("Withdrawal Successful")){
+            amount = amount - withdrawalAmount;
+        }
+
+    }
+
+    public void deposit(double depositAmount){
+      amount = amount + depositAmount;
+    }
+
+    public void updateBalance(){
+        System.out.print("The balance after deposit is : " + amount);
+    }
+}
+
+class Main{
+    public static void main(String[] args) {
+
+     Bank account = new Bank(10000);
+        System.out.println("Amount = 10000");
+
+        account.withDrawal(5000);
+        System.out.println("Withdrawal Amount = 5000");
+
+
+        account.deposit(4000);
+        System.out.println("Deposit Amount = 4000");
+
+        account.updateBalance();
+}
+
+}
+
+
+
+//tota A = 1000
+// withdrawal = 6000
+//deposit = 3000; total balance = deposit + available balance after withdrawl.
