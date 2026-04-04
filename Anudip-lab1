@@ -78,3 +78,30 @@ public class maxNumber {
     }
 }
 
+#Q3 Write a program to declare two variables num and n 
+
+import java.util.Scanner;
+
+public class bitChecker {
+
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter number : ");
+            int num = sc.nextInt();
+
+            System.out.print("Enter number position : ");
+            int n = sc.nextInt();
+
+            int bitStatus = (num >> n) & 1;
+
+
+            if (bitStatus == 1) {
+                System.out.println("The " + n + "th bit of " + num + " is set (1).");
+            } else {
+                System.out.println("The " + n + "th bit of " + num + " is not set (0).");
+            }
+        }
+    }
+
