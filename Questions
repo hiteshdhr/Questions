@@ -41,6 +41,28 @@ public class triangle {
     }
 }
 
+#leap year
+import java.util.Scanner;
+
+public class leapyears {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first year: ");
+        int year1 = sc.nextInt();
+
+        System.out.print("Enter second year: ");
+        int year2 = sc.nextInt();
+
+      for(int i = year1; i <= year2; i++){
+          if(i % 4 == 0){
+              System.out.println(i + "");
+          }
+      }
+
+    }
+
+}
 
 
 
