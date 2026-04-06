@@ -54,13 +54,21 @@ public class leapyears {
         System.out.print("Enter second year: ");
         int year2 = sc.nextInt();
 
+
+
       for(int i = year1; i <= year2; i++){
-          if(i % 4 == 0){
+          if(year1>=1000 && year2 <= 9999) {
+              System.out.println("Year is valid.");
+          }
+          if(i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
               System.out.println(i + "");
           }
       }
 
     }
+
+}
+
 
 }
 
